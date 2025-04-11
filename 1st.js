@@ -1,2 +1,2 @@
 alert("Hello")
-print("hello")
+print("hello World")

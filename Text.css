@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    padding: 2% 1%;
+    justify-content:space-between;
+    align-items:center;
+    border-width: 12px;
+}
+
+.id{
+    flex: 1;
+    text-align: right;
+    
+}
+.id ul li{
+    border: 1px solid black;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: cornflowerblue;
+     display: inline-block;
+    margin-right: 4%;
+    position: relative;
+}
+.id ul li a{
+    color: darkkhaki;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: fantasy;
+} 
+.id ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: darkblue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.id ul li:hover::after{
+    width: 100%;
+}
+body{
+    background-image:url(https://th.bing.com/th/id/OIP.2BKWzMpffiY6X2hgDpLC5AHaFj?w=800&h=600&rs=1&pid=ImgDetMain.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+#st1{
+    margin:10px;
+    text-align: center;
+}
+.container{
+    margin-bottom: 10%;
+  position: relative;
+  
+  top: 0;
+  left: 0;
+}
+.div{
+    text-align: left;
+    color:black;
+    background-image: url(https://www.traveloffpath.com/wp-content/uploads/2023/02/Dubai-Is-The-Worlds-Top-Tourist-Destination-This-Is-Why-Its-So-Incredible-1.jpg);
+    background-size: contain;
+    margin-right: 60%;
+    margin-top: 10%;
+    margin-left: 1%;
+    position:absolute;
+    top: 10px;
+    right: 5px;
+    border-top: 100px;
+  
+}
+.id1{
+    text-align:left;
+    background-repeat: repeat;
+    background-size: contain;
+    background-image: url(https://www.traveloffpath.com/wp-content/uploads/2023/02/Dubai-Is-The-Worlds-Top-Tourist-Destination-This-Is-Why-Its-So-Incredible-1.jpg);
+    margin-left: 50%;
+    position:relative;
+    top: 0;
+    left: 5px;
+   
+}
+
+.image{
+    display:flex;
+    justify-content:center;
+    align-items:last baseline;
+    border: 1px solid black; 
+    background-color: rgb(83, 191, 241);
+}
+.a{
+    text-align: right;
+    padding-left: 50%;
+    
+
+}
+p::after{
+    color: blue;
+    border: 12px solid black;
+    cursor: pointer;
+}
+p:hover::after{
+    width: 100%;
+}

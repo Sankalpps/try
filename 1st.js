@@ -1,0 +1,2 @@
+alert("Hello")
+print("hello")

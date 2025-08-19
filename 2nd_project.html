@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2nd project.css">
+</head>
+<body>
+    <div class="search">
+        <div class="srch">
+        <input  type="search" placeholder="Enter the city">
+        <button>Search</button>
+    </div>
+    <div class="error">
+        <p>Invalid City Name</p>
+    </div>
+
+<div class="weather">
+    <img src="https://th.bing.com/th/id/OIP.r22tIgFaIoPJoKmd49RHRQHaHa?w=165&h=180&c=7&r=0&o=5&pid=1.7" class="weather-icon">
+    <h1 class="temp">22°C</h1>
+    <h2 class="city">Bengalore</h2>
+    <div class="details">
+        <div class="col">
+            <img src="https://cdn-icons-png.freepik.com/512/9290/9290540.png" >
+            <div>
+                <p class="humid">50%</p>
+                <p>Humidity</p>
+            </div>
+        </div>
+        
+        <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn1r_lvLTmJiHgzIntDNUNlAsEgbe7hmuFiA&s" >
+            <div>
+            <p class="wind">15 km/h</p>
+            <p>wind speed</p>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+</div>
+<script>
+    const apikey="394ad430957b96a372f0a97e716b00c6"
+    const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+    const searchbox = document.querySelector(".search input");
+    const searchbtn = document.querySelector(".search button");
+    const weatherIcon = document.querySelector(".weather-icon");
+async function checkWeather(city){
+    const responce = await fetch(apiurl + city + `&appid=${apikey}`);
+    if(responce.status == 404){
+        document.querySelector(".error").style.display="block"
+        document.querySelector(".weather").style.display="none"
+    }else{
+    var data=await responce.json();
+    
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) +"°C";
+    document.querySelector(".wind").innerHTML = data.wind.speed +" km/h";
+    document.querySelector(".humid").innerHTML = data.main.humidity+"%";
+    if(data.weather[0].main == "Clouds"){
+        weatherIcon.src="https://th.bing.com/th/id/OIP.x1tKL8oOfwSjNZLcrPdAdQHaHa?w=225&h=220&c=7&r=0&o=5&pid=1.7";
+    }
+    else if(data.weather[0].main == "Clear"){
+        weatherIcon.src="https://th.bing.com/th/id/OIP.0ku6JPMsh2UOP1pzv6OT-AHaHa?w=216&h=212&c=7&r=0&o=5&pid=1.7";
+
+    }
+    else if(data.weather[0].main == "Rain"){
+        weatherIcon.src="https://th.bing.com/th/id/OIP.6qFdFzm5eYvxt3ByU9hbwgHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7";
+        
+    }
+    else if(data.weather[0].main == "Drizzle"){
+        weatherIcon.src="https://th.bing.com/th/id/OIP.e2fqnUvU5GsM8aHAw6YqpwHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7";
+        
+    }
+    else if(data.weather[0].main == "Mist"||"Smoke"){
+        weatherIcon.src="https://th.bing.com/th/id/OIP.CN1O-3qRvinduaxhkptGxQHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7";
+        
+    }
+    document.querySelector(".weather").style.display = "block";
+    document.querySelector(".error").style.display="none"
+
+}
+}
+searchbtn.addEventListener("click",()=>{
+    checkWeather(searchbox.value);
+})
+
+</script>
+</body>
+</html>

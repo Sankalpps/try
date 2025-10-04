@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    background-image:url(https://static.vecteezy.com/system/resources/thumbnails/007/073/820/small/wooden-table-and-blur-of-beauty-sunset-sky-and-mountains-as-background-free-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+nav{
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    flex: 1;
+    text-align: right;
+}
+.title ul li{
+
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.title ul li a{
+    color: antiquewhite;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: fantasy;
+} 
+.title ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: darkblue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.title ul li:hover::after{
+    width: 100%;
+}
+.search{
+    float:left;
+    
+}
+.srch{
+    width: 100px;
+    height: 25px;
+    background: white;
+    border: 2px solid black;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    padding-top: 2%;
+    text-align: left;
+    border-radius: 2px;
+    text-align: center;
+}
+.btn{
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    border: 2px solid black;
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: black;
+    position: relative;
+    padding-top:10%
+}
+.content .par{
+    padding-left: 25px;
+    padding-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.content h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content .cn a{
+    text-decoration: none;
+}
+.form{
+    width: 200px;
+    height: 300px;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/040/890/255/small_2x/ai-generated-empty-wooden-table-on-the-natural-background-for-product-display-free-photo.jpg);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 20%;
+    left: 70%;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.form h2{
+    border: 2px solid black;
+    background-color: white;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 12px;
+}
+.form input{
+    width: 200px;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: black;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    
+    font-family: 'Times New Roman', Times, serif;
+}
+.form .link{
+    color: white;
+}
+.form .btn{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.form .link{
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+.form .link a{
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid black;
+   
+    
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: white;
+}
+.icons ion-icon{
+    color: white;
+    font-size: 20px;
+    padding-left: 14px;
+    padding-top: 5px;
+}
